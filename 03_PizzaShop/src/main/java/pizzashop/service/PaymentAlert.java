@@ -8,6 +8,7 @@ import java.util.Optional;
 
 public class PaymentAlert implements PaymentOperation {
     private PizzaService service;
+    private final String paymentAlertDelimitator = "--------------------------";
 
     public PaymentAlert(PizzaService service){
         this.service=service;
@@ -15,10 +16,10 @@ public class PaymentAlert implements PaymentOperation {
 
     @Override
     public void cardPayment() {
-        System.out.println("--------------------------");
+        System.out.println(paymentAlertDelimitator);
         System.out.println("Paying by card...");
         System.out.println("Please insert your card!");
-        System.out.println("--------------------------");
+        System.out.println(paymentAlertDelimitator);
     }
     @Override
     public void cashPayment() {

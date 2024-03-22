@@ -53,7 +53,9 @@ public class MainGUIController  {
 
     PizzaService service;
 
-    public MainGUIController(){}
+    public MainGUIController(){
+        //Empty constructor
+    }
 
     public void setService(PizzaService service){
         this.service=service;
